@@ -1,0 +1,3 @@
+Tests: build-test
+Depends: libmaxminddb-dev, build-essential, pkg-config
+Restrictions: allow-stderr

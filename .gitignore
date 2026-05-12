@@ -45,3 +45,15 @@ Makefile.in
 Testing/
 install_manifest.txt
 build/
+
+# Debian packaging build artifacts
+debian/.debhelper/
+debian/autoreconf.*
+debian/debhelper-build-stamp
+debian/files
+debian/*.debhelper.log
+debian/*.substvars
+debian/libmaxminddb0/
+debian/libmaxminddb-dev/
+debian/mmdb-bin/
+debian/tmp/

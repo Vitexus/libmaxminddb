@@ -1,0 +1,5 @@
+usr/include/maxminddb.h
+usr/include/maxminddb_config.h
+usr/lib/*/libmaxminddb.a
+usr/lib/*/libmaxminddb.so
+usr/lib/*/pkgconfig/libmaxminddb.pc

@@ -1,0 +1,61 @@
+Source: libmaxminddb
+Section: libs
+Priority: optional
+Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-autoreconf,
+ pkg-config,
+Standards-Version: 4.7.0
+Homepage: https://maxmind.github.io/libmaxminddb/
+Vcs-Git: https://github.com/VitexSoftware/libmaxminddb.git
+Vcs-Browser: https://github.com/VitexSoftware/libmaxminddb
+Rules-Requires-Root: no
+
+Package: libmaxminddb0
+Section: libs
+Architecture: any
+Multi-Arch: same
+Pre-Depends:
+ ${misc:Pre-Depends},
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Description: IP geolocation database library
+ The libmaxminddb library provides a C library for reading MaxMind DB files,
+ including the GeoIP2 databases from MaxMind. This is a custom binary format
+ designed to facilitate fast lookups of IP addresses while allowing for great
+ flexibility in the type of data associated with an address.
+ .
+ This package contains the shared library.
+
+Package: libmaxminddb-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends:
+ libmaxminddb0 (= ${binary:Version}),
+ ${misc:Depends},
+Description: IP geolocation database library - development files
+ The libmaxminddb library provides a C library for reading MaxMind DB files,
+ including the GeoIP2 databases from MaxMind. This is a custom binary format
+ designed to facilitate fast lookups of IP addresses while allowing for great
+ flexibility in the type of data associated with an address.
+ .
+ This package contains the development files (headers, static library,
+ pkg-config file).
+
+Package: mmdb-bin
+Section: net
+Architecture: any
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Description: IP geolocation database lookup tool
+ The libmaxminddb library provides a C library for reading MaxMind DB files,
+ including the GeoIP2 databases from MaxMind. This is a custom binary format
+ designed to facilitate fast lookups of IP addresses while allowing for great
+ flexibility in the type of data associated with an address.
+ .
+ This package contains the mmdblookup command-line utility for looking up
+ an IP address in a MaxMind DB file.
